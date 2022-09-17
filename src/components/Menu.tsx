@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Typography } from '@mui/material';
-import Block from './Block';
 import { Page } from '../App';
 
 
@@ -14,13 +13,13 @@ const Menu: React.FC<Props> = ({ pages }) => {
     <Container
     // sx={{ width: '100vw', height: '100vh', background: 'red' }}
     >
-      {pages.map((p) => {
+      {/* {pages.map((p) => {
         return (
           <Block title={p.title ?? ''} >
             {p.content}
           </Block>
         )
-      })}
+      })} */}
     </Container>
   );
 }

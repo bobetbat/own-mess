@@ -1,4 +1,4 @@
-import { Stack } from '@mui/material';
+import { Grid } from '@mui/material';
 import { ReactNode } from 'react';
 
 type Props = {
@@ -7,8 +7,10 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <Stack sx={{ minHeight: 1 }}>
-      {children}
-    </Stack>
+    <Grid container sx={{ minHeight: 1 }}>
+      <Grid item xs={6} md={8}>
+       {children}
+      </Grid>
+    </Grid>
   );
 }

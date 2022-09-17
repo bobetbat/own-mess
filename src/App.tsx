@@ -1,12 +1,13 @@
 import React from 'react';
-import { Container, Box } from '@mui/material';
+import { Container, Box, Dialog } from '@mui/material';
 
 import logo from './logo.svg';
 import './App.css';
 import { Header } from './components';
 import Layout from './components/Layout';
-import Block from './components/Block';
 import Menu from './components/Menu';
+import { DialogList } from './components/DialogList';
+import { DialogWindow } from './components/DialogWindow';
 
 export interface Page {
   title: string;
@@ -36,8 +37,8 @@ const App: React.FC = () => {
   return (
     <div className="App" >
       <Layout>
-        <Header pages={pages} />
-        <Menu pages={pages} />
+        <DialogList dialogs={[]} />
+        <DialogWindow messages={[]} />
       </Layout>
     </div>
   );
